@@ -19,7 +19,8 @@ resource "azurerm_resource_group" "example" {
 }
 
 module "storage" {
-  source = "github.com/alderichoarau/terraform-azurerm-storage"
+  source  = "app.terraform.io/alderic-hoarau/storage/azurerm"
+  version = "~> 0.1"
 
   name                = "stexample"
   resource_group_name = azurerm_resource_group.example.name

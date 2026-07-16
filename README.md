@@ -6,7 +6,8 @@ Terraform module that provisions an Azure Storage Account with one private and o
 
 ```hcl
 module "storage" {
-  source = "github.com/alderichoarau/terraform-azurerm-storage"
+  source  = "app.terraform.io/alderic-hoarau/storage/azurerm"
+  version = "~> 0.1"
 
   name                 = "stmyproject"
   resource_group_name  = azurerm_resource_group.this.name
